@@ -81,8 +81,6 @@ class ButtonControl:
 
         elif self.p_builder.number_of_pages < 20:
 
-            self.previous_button_frame.destroy()
-
             for i in range(self.p_builder.number_of_pages-2):
                 self.buttons_numbers[i].grid(row = 0,column = i)
                 self.current_btns_frame.append(self.buttons_numbers[i])
