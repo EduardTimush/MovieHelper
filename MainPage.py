@@ -105,8 +105,12 @@ class MainPage:
         self.a.focus_set()
 
         image = ImageTk.PhotoImage(Image.open('grusti.png'))
-        lbl_txt = Label(master=self.a,text = '''По запросу ничего не найдено :)
-        ''',font = 20)
+        if self.current_language == 'ru':
+            lbl_txt = Label(master=self.a,text = '''По запросу ничего не найдено :)
+            ''',font = 20)
+        else:
+            lbl_txt = Label(master=self.a,text = '''Wasn't found anything :)
+            ''',font = 20)
 
         lbl_image = Label(master=self.a,image = image)
         lbl_image.image = image
